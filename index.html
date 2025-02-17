@@ -715,7 +715,7 @@ if (currentPage >= 37) {
             
             // Automatically start background music
             if (!isBackgroundPlaying) {
-                backgroundAudio.volume = 0.2;
+                backgroundAudio.volume = 0.1;
                 const playPromise = backgroundAudio.play();
                 if (playPromise) {
                     playPromise.catch(error => {
