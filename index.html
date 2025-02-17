@@ -135,13 +135,64 @@
             transform-style: preserve-3d;
             backface-visibility: hidden;
             width: 50%;
+            height: 65vh;
+            max-height: 65vh;
+            overflow-y: auto;
             padding: 2vw;
-            margin-top: 12rem;
-            margin-bottom: 13rem;
+            margin-top: 8rem;
+            margin-bottom: 8rem;
             margin-left: 5.2rem;
             margin-right: 4.0rem;
             text-align: center;
             font-size: 1rem;
+            color: #5A3825;
+            background: transparent;
+            border-radius: 15px;
+            box-shadow: inset 0 0 15px rgba(90, 56, 37, 0.1);
+        }
+
+        /* बेहतर स्क्रॉलबार स्टाइलिंग */
+        .page::-webkit-scrollbar {
+            width: 12px;
+            background: transparent;
+        }
+
+        .page::-webkit-scrollbar-track {
+            background: rgba(253, 245, 230, 0.8);
+            border: 3px solid transparent;   /* बॉर्डर कम किया */
+            background-clip: padding-box;
+            border-radius: 25px;            /* बॉर्डर रेडियस बढ़ाया */
+            box-shadow: inset 0 0 6px rgba(139, 69, 19, 0.1);
+            margin: 5px; 
+        }
+
+        .page::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #D4AF37, #C5A028);
+            border: 3px solid transparent;   /* बॉर्डर कम किया */
+            background-clip: padding-box;
+            border-radius: 25px;            /* बॉर्डर रेडियस बढ़ाया */
+            min-height: 40px;               /* न्यूनतम ऊंचाई कम की */
+            max-height: 100px;              /* अधिकतम ऊंचाई सेट की */
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* होवर इफेक्ट्स */
+        .page::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #703609, #8b4513);
+            border: 3px solid transparent;
+        }
+
+        .page::-webkit-scrollbar-thumb:active {
+            background: linear-gradient(135deg, #5a2d07, #703609);
+        }
+
+        /* Firefox के लिए स्टाइलिंग */
+        .page {
+            scrollbar-width: thin;
+            scrollbar-color: #D4AF37 rgba(253, 245, 230, 0.8);
+        }
+        .page::selection {
+            background: rgba(139, 69, 19, 0.2);
             color: #5A3825;
         }
 
